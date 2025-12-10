@@ -73,15 +73,17 @@
                     },
                     colors: {
                         brand: {
-                            bg: '#111111',
-                            card: '#1e1e1e',
-                            text: '#FFFFFF',
-                            subtext: '#A1A1AA',
+                            bg: '#F8F9FA',
+                            card: '#FFFFFF',
+                            text: '#162790',
+                            subtext: '#4A5568',
                             accent: {
-                                start: '#FF4D4D',
-                                end: '#FFC107',
+                                start: '#162790',
+                                end: '#FFED00',
                             },
-                            cta: '#FFC107',
+                            cta: '#FFED00',
+                            primary: '#162790',
+                            secondary: '#FFED00',
                         }
                     }
                 }
@@ -90,12 +92,12 @@
     </script>
     <style>
         body {
-            background-color: #111111;
-            color: #FFFFFF;
+            background-color: #F8F9FA;
+            color: #162790;
         }
 
         .text-gradient {
-            background: linear-gradient(to right, #FF4D4D, #FFC107);
+            background: linear-gradient(to right, #162790, #FFED00);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -104,7 +106,7 @@
         }
 
         .bg-gradient-brand {
-            background: linear-gradient(to right, #FF4D4D, #FFC107);
+            background: linear-gradient(to right, #162790, #FFED00);
         }
 
         /* Custom Animations */
@@ -141,17 +143,17 @@
         }
 
         .glow-effect {
-            box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+            box-shadow: 0 0 10px rgba(22, 39, 144, 0.5);
             animation: glow 2s infinite alternate;
         }
 
         @keyframes glow {
             from {
-                box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+                box-shadow: 0 0 10px rgba(22, 39, 144, 0.5);
             }
 
             to {
-                box-shadow: 0 0 20px rgba(255, 193, 7, 0.8), 0 0 10px rgba(255, 77, 77, 0.5);
+                box-shadow: 0 0 20px rgba(22, 39, 144, 0.8), 0 0 10px rgba(255, 237, 0, 0.5);
             }
         }
 
@@ -162,7 +164,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #111;
+            background-color: #F8F9FA;
             z-index: 9999;
             display: flex;
             justify-content: center;
@@ -176,7 +178,7 @@
 
         .loader-icon {
             font-size: 4rem;
-            color: #FFC107;
+            color: #162790;
             animation: bounce 1s infinite alternate;
         }
 
@@ -213,7 +215,7 @@
 
     <!-- Header -->
     <header data-aos="fade-down"
-        class="fixed w-full top-0 z-50 transition-all duration-300 backdrop-blur-md bg-black/50 border-b border-white/10">
+        class="fixed w-full top-0 z-50 transition-all duration-300 backdrop-blur-md bg-white/80 border-b border-gray-200 shadow-sm">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <!-- Logo -->
             <a href="#" class="flex items-center gap-2 group">
@@ -223,41 +225,44 @@
             <!-- Desktop Menu -->
             <nav class="hidden md:flex items-center gap-8">
                 <a href="#nosotros"
-                    class="text-sm font-semibold text-gray-300 hover:text-brand-cta transition-colors">Nosotros</a>
+                    class="text-sm font-semibold text-brand-primary hover:text-brand-secondary transition-colors">Nosotros</a>
                 <a href="#entrenamientos"
-                    class="text-sm font-semibold text-gray-300 hover:text-brand-cta transition-colors">Entrenamientos</a>
+                    class="text-sm font-semibold text-brand-primary hover:text-brand-secondary transition-colors">Entrenamientos</a>
                 <a href="#inscripciones"
-                    class="text-sm font-semibold text-gray-300 hover:text-brand-cta transition-colors">Inscripciones</a>
+                    class="text-sm font-semibold text-brand-primary hover:text-brand-secondary transition-colors">Inscripciones</a>
                 <a href="#galeria"
-                    class="text-sm font-semibold text-gray-300 hover:text-brand-cta transition-colors">Galería</a>
+                    class="text-sm font-semibold text-brand-primary hover:text-brand-secondary transition-colors">Galería</a>
                 <a href="#contacto"
-                    class="text-sm font-semibold text-gray-300 hover:text-brand-cta transition-colors">Contacto</a>
+                    class="text-sm font-semibold text-brand-primary hover:text-brand-secondary transition-colors">Contacto</a>
             </nav>
 
             <!-- CTA Button -->
             <div class="hidden md:block">
                 <a href="#inscripciones"
-                    class="px-6 py-2 bg-brand-cta text-black font-bold rounded-full hover:shadow-[0_0_15px_rgba(255,193,7,0.5)] transition-all transform hover:scale-105">
+                    class="px-6 py-2 bg-brand-primary text-white font-bold rounded-full hover:shadow-[0_0_15px_rgba(22,39,144,0.5)] transition-all transform hover:scale-105">
                     Inscríbete
                 </a>
             </div>
 
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden text-2xl text-white focus:outline-none">
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-brand-primary focus:outline-none">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-brand-card border-t border-white/10 absolute w-full left-0">
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white border-t border-gray-200 absolute w-full left-0 shadow-lg">
             <div class="flex flex-col p-6 gap-4">
-                <a href="#nosotros" class="text-gray-300 hover:text-brand-cta font-semibold">Nosotros</a>
-                <a href="#entrenamientos" class="text-gray-300 hover:text-brand-cta font-semibold">Entrenamientos</a>
-                <a href="#inscripciones" class="text-gray-300 hover:text-brand-cta font-semibold">Inscripciones</a>
-                <a href="#galeria" class="text-gray-300 hover:text-brand-cta font-semibold">Galería</a>
-                <a href="#contacto" class="text-gray-300 hover:text-brand-cta font-semibold">Contacto</a>
+                <a href="#nosotros" class="text-brand-primary hover:text-brand-secondary font-semibold">Nosotros</a>
+                <a href="#entrenamientos"
+                    class="text-brand-primary hover:text-brand-secondary font-semibold">Entrenamientos</a>
+                <a href="#inscripciones"
+                    class="text-brand-primary hover:text-brand-secondary font-semibold">Inscripciones</a>
+                <a href="#galeria" class="text-brand-primary hover:text-brand-secondary font-semibold">Galería</a>
+                <a href="#contacto" class="text-brand-primary hover:text-brand-secondary font-semibold">Contacto</a>
                 <a href="#inscripciones" id="nav-cta-mobile"
-                    class="mt-2 text-center px-6 py-3 bg-brand-cta text-black font-bold rounded-full">
+                    class="mt-2 text-center px-6 py-3 bg-brand-primary text-white font-bold rounded-full">
                     Inscríbete
                 </a>
             </div>
@@ -564,7 +569,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black py-8 border-t border-white/10">
+    <footer class="bg-brand-primary py-8 border-t border-gray-200">
         <div class="container mx-auto px-6 text-center">
             <div class="flex items-center justify-center gap-2 mb-4">
                 <img id="footer-logo-img" src="" alt="CEFOVOL MBL" class="h-12 w-auto">
@@ -575,7 +580,7 @@
                 <!-- Dynamic Content -->
             </div>
 
-            <p class="text-gray-500 text-sm" id="footer-copyright">
+            <p class="text-white/70 text-sm" id="footer-copyright">
                 <!-- Dynamic Content -->
             </p>
         </div>
