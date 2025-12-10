@@ -1,0 +1,117 @@
+{
+    "header": {
+        "logo_text": "CEFOVOL MBL",
+        "menu": {
+            "about": "Nosotros",
+            "trainings": "Entrenamientos",
+            "inscriptions": "Inscripciones",
+            "gallery": "Galería",
+            "contact": "Contacto"
+        },
+        "cta_button": "Inscríbete"
+    },
+    "hero": {
+        "title_part1": "Formamos",
+        "title_highlight1": "equipos",
+        "title_part2": "y",
+        "title_highlight2": "personas",
+        "title_part3": "extraordinarias",
+        "subtitle": "Club de voleibol con formación por categorías (Mini, Infantil, Juvenil y Libre). Entrenamientos los jueves, viernes y sábado de 16:00 a 18:00. ¡Vive la energía CEFOVOL MBL!",
+        "whatsapp_button": "Inscríbete por WhatsApp",
+        "schedule_button": "Ver horarios",
+        "background_image": "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?q=80&w=2000&auto=format&fit=crop",
+        "hero_image": "https://images.unsplash.com/photo-1592656094267-764a45160876?q=80&w=1000&auto=format&fit=crop"
+    },
+    "about": {
+        "title": "Sobre",
+        "title_highlight": "Nosotros",
+        "description": "CEFOVOL MBL impulsa el voleibol en Irapuato con un enfoque formativo, competitivo y social. Buscamos desarrollar atletas completos dentro y fuera de la cancha.",
+        "cards": [
+            {
+                "icon": "fa-dumbbell",
+                "title": "Entrenamiento",
+                "text": "Técnico, táctico y físico enfocado por edades y niveles de habilidad."
+            },
+            {
+                "icon": "fa-users",
+                "title": "Comunidad",
+                "text": "Ambiente familiar y eventos del club que fomentan la unión."
+            },
+            {
+                "icon": "fa-trophy",
+                "title": "Proyección",
+                "text": "Participación en torneos locales y regionales de alto nivel."
+            }
+        ]
+    },
+    "trainings": {
+        "title": "Entrenamientos y",
+        "title_highlight": "Horarios",
+        "location": "Sede: Gimnasio de la Unidad Deportiva Sur",
+        "schedule_title": "Horario Semanal",
+        "schedule_table": [
+            { "day": "Jueves", "time": "16:00 - 18:00", "location": "Gimnasio U.D. Sur" },
+            { "day": "Viernes", "time": "16:00 - 18:00", "location": "Gimnasio U.D. Sur" },
+            { "day": "Sábado", "time": "16:00 - 18:00", "location": "Gimnasio U.D. Sur" }
+        ],
+        "note": "Traer hidratación y ropa deportiva. Se sugiere el uso de rodilleras para mayor protección.",
+        "categories_title": "Categorías",
+        "categories": [
+            { "name": "Mini", "age": "6 a 10 años" },
+            { "name": "Infantil", "age": "11 a 14 años" },
+            { "name": "Juvenil", "age": "15 a 18 años" },
+            { "name": "Libre", "age": "18+ años" }
+        ],
+        "availability_btn": "Consultar Disponibilidad"
+    },
+    "gallery": {
+        "title": "Nuestra",
+        "title_highlight": "Galería",
+        "images": [
+            { 
+                "url": "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?q=80&w=800&auto=format&fit=crop", 
+                "label": "Entrenamiento" 
+            },
+            { 
+                "url": "https://images.unsplash.com/photo-1592656094267-764a45160876?q=80&w=800&auto=format&fit=crop", 
+                "label": "Equipo" 
+            },
+            { 
+                "url": "https://images.unsplash.com/photo-1526676037777-05a232554f77?q=80&w=800&auto=format&fit=crop", 
+                "label": "Sesión" 
+            },
+            { 
+                "url": "https://images.unsplash.com/photo-1459865264687-595d652de67e?q=80&w=800&auto=format&fit=crop", 
+                "label": "Convivencia" 
+            },
+            { 
+                "url": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop", 
+                "label": "Juego amistoso" 
+            },
+            { 
+                "url": "https://images.unsplash.com/photo-1526676037777-05a232554f77?q=80&w=800&auto=format&fit=crop", 
+                "label": "Trabajo físico" 
+            }
+        ]
+    },
+    "contact": {
+        "title": "Inscripciones y",
+        "title_highlight": "Contacto",
+        "description": "Únete a la familia CEFOVOL MBL. Completa el formulario o contáctanos directamente por WhatsApp.",
+        "form": {
+            "submit_btn": "Enviar Solicitud"
+        },
+        "whatsapp": {
+            "number": "462 265 3902",
+            "link": "https://wa.me/524622653902",
+            "label": "WhatsApp Oficial"
+        },
+        "requirements": {
+            "label": "Requisitos",
+            "text": "Identificación del padre/madre, Ficha de salud básica"
+        }
+    },
+    "footer": {
+        "copyright": "© 2024 CEFOVOL MBL. Todos los derechos reservados."
+    }
+}

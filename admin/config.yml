@@ -1,0 +1,84 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (change to master if applicable)
+
+media_folder: "images/uploads" # Media files will be stored in the repo under images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "data.json"
+        label: "Website Content"
+        name: "home"
+        format: "json"
+        fields:
+          - {label: "Header", name: "header", widget: "object", fields: [
+              {label: "Logo Text", name: "logo_text", widget: "string"},
+              {label: "CTA Button", name: "cta_button", widget: "string"}
+            ]}
+          - {label: "Hero Section", name: "hero", widget: "object", fields: [
+              {label: "Title Part 1", name: "title_part1", widget: "string"},
+              {label: "Title Highlight 1", name: "title_highlight1", widget: "string"},
+              {label: "Title Part 2", name: "title_part2", widget: "string"},
+              {label: "Title Highlight 2", name: "title_highlight2", widget: "string"},
+              {label: "Title Part 3", name: "title_part3", widget: "string"},
+              {label: "Subtitle", name: "subtitle", widget: "text"},
+              {label: "WhatsApp Button Text", name: "whatsapp_button", widget: "string"},
+              {label: "Schedule Button Text", name: "schedule_button", widget: "string"},
+              {label: "Hero Image", name: "hero_image", widget: "image"},
+              {label: "Background Image", name: "background_image", widget: "image"}
+            ]}
+          - {label: "About Section", name: "about", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Title Highlight", name: "title_highlight", widget: "string"},
+              {label: "Description", name: "description", widget: "text"},
+              {label: "Cards", name: "cards", widget: "list", fields: [
+                  {label: "Icon (FontAwesome Class)", name: "icon", widget: "string"},
+                  {label: "Title", name: "title", widget: "string"},
+                  {label: "Text", name: "text", widget: "text"}
+                ]}
+            ]}
+          - {label: "Trainings Section", name: "trainings", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Title Highlight", name: "title_highlight", widget: "string"},
+              {label: "Location", name: "location", widget: "string"},
+              {label: "Schedule Title", name: "schedule_title", widget: "string"},
+              {label: "Schedule Table", name: "schedule_table", widget: "list", fields: [
+                  {label: "Day", name: "day", widget: "string"},
+                  {label: "Time", name: "time", widget: "string"},
+                  {label: "Location", name: "location", widget: "string"}
+                ]},
+              {label: "Note", name: "note", widget: "text"},
+              {label: "Categories Title", name: "categories_title", widget: "string"},
+              {label: "Categories", name: "categories", widget: "list", fields: [
+                  {label: "Name", name: "name", widget: "string"},
+                  {label: "Age Range", name: "age", widget: "string"}
+                ]}
+            ]}
+          - {label: "Gallery", name: "gallery", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Title Highlight", name: "title_highlight", widget: "string"},
+              {label: "Images", name: "images", widget: "list", fields: [
+                  {label: "Image", name: "url", widget: "image"},
+                  {label: "Label", name: "label", widget: "string"}
+                ]}
+            ]}
+          - {label: "Contact Section", name: "contact", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Title Highlight", name: "title_highlight", widget: "string"},
+              {label: "Description", name: "description", widget: "text"},
+              {label: "WhatsApp Number", name: "whatsapp", widget: "object", fields: [
+                  {label: "Display Number", name: "number", widget: "string"},
+                  {label: "Link (wa.me)", name: "link", widget: "string"},
+                  {label: "Label", name: "label", widget: "string"}
+                ]},
+              {label: "Requirements", name: "requirements", widget: "object", fields: [
+                  {label: "Label", name: "label", widget: "string"},
+                  {label: "Text", name: "text", widget: "text"}
+                ]}
+            ]}
+          - {label: "Footer", name: "footer", widget: "object", fields: [
+              {label: "Copyright", name: "copyright", widget: "string"}
+            ]}

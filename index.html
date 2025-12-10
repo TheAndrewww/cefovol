@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEFOVOL MBL - Club de Voleibol</title>
+    <meta name="description"
+        content="Club de voleibol en Irapuato con formación por categorías: Mini, Infantil, Juvenil y Libre. ¡Únete a la familia CEFOVOL MBL!">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cefovol-mbl.netlify.app/">
+    <meta property="og:title" content="CEFOVOL MBL - Formamos equipos y personas extraordinarias">
+    <meta property="og:description"
+        content="Entrenamientos de voleibol en Irapuato. Categorías desde los 6 años. ¡Inscríbete hoy!">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?q=80&w=1200&auto=format&fit=crop">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://cefovol-mbl.netlify.app/">
+    <meta property="twitter:title" content="CEFOVOL MBL - Club de Voleibol">
+    <meta property="twitter:description"
+        content="Entrenamientos de voleibol en Irapuato. Categorías desde los 6 años. ¡Inscríbete hoy!">
+    <meta property="twitter:image"
+        content="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?q=80&w=1200&auto=format&fit=crop">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3311/3311579.png" type="image/png">
+
+    <!-- Google Analytics (Placeholder) -->
+    <!-- Reemplaza G-XXXXXXXXXX con tu ID de medición real -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            bg: '#111111',
+                            card: '#1e1e1e',
+                            text: '#FFFFFF',
+                            subtext: '#A1A1AA',
+                            accent: {
+                                start: '#FF4D4D',
+                                end: '#FFC107',
+                            },
+                            cta: '#FFC107',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #111111;
+            color: #FFFFFF;
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #FF4D4D, #FFC107);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: gradientMove 3s linear infinite;
+        }
+
+        .bg-gradient-brand {
+            background: linear-gradient(to right, #FF4D4D, #FFC107);
+        }
+
+        /* Custom Animations */
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .glow-effect {
+            box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+            }
+
+            to {
+                box-shadow: 0 0 20px rgba(255, 193, 7, 0.8), 0 0 10px rgba(255, 77, 77, 0.5);
+            }
+        }
+
+        /* Preloader */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #111;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+        }
+
+        .loader-content {
+            text-align: center;
+        }
+
+        .loader-icon {
+            font-size: 4rem;
+            color: #FFC107;
+            animation: bounce 1s infinite alternate;
+        }
+
+        @keyframes bounce {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+    <!-- Data Configuration -->
+    <!-- <script src="data.js"></script> REMOVED: Now using fetch('data.json') -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+
+<body class="antialiased overflow-x-hidden">
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <i class="fa-solid fa-volleyball loader-icon mb-4"></i>
+            <h2 class="text-2xl font-bold text-white tracking-widest">CEFOVOL MBL</h2>
+            <div class="mt-4 w-48 h-1 bg-gray-800 rounded-full overflow-hidden mx-auto">
+                <div class="h-full bg-gradient-brand w-1/2 animate-[pulse_1s_infinite]"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header data-aos="fade-down"
+        class="fixed w-full top-0 z-50 transition-all duration-300 backdrop-blur-md bg-black/50 border-b border-white/10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div
+                    class="w-8 h-8 rounded-full bg-gradient-brand flex items-center justify-center text-black font-bold">
+                    <i class="fa-solid fa-volleyball"></i>
+                </div>
+                <span class="text-xl font-extrabold tracking-wide" id="nav-logo">CEFOVOL MBL</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#nosotros"
+                    class="text-sm font-semibold text-gray-300 hover:text-brand-cta transition-colors">Nosotros</a>
+                <a href="#entrenamientos"
+                    class="text-sm font-semibold text-gray-300 hover:text-brand-cta transition-colors">Entrenamientos</a>
+                <a href="#inscripciones"
+                    class="text-sm font-semibold text-gray-300 hover:text-brand-cta transition-colors">Inscripciones</a>
+                <a href="#galeria"
+                    class="text-sm font-semibold text-gray-300 hover:text-brand-cta transition-colors">Galería</a>
+                <a href="#contacto"
+                    class="text-sm font-semibold text-gray-300 hover:text-brand-cta transition-colors">Contacto</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden md:block">
+                <a href="#inscripciones"
+                    class="px-6 py-2 bg-brand-cta text-black font-bold rounded-full hover:shadow-[0_0_15px_rgba(255,193,7,0.5)] transition-all transform hover:scale-105">
+                    Inscríbete
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-white focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-card border-t border-white/10 absolute w-full left-0">
+            <div class="flex flex-col p-6 gap-4">
+                <a href="#nosotros" class="text-gray-300 hover:text-brand-cta font-semibold">Nosotros</a>
+                <a href="#entrenamientos" class="text-gray-300 hover:text-brand-cta font-semibold">Entrenamientos</a>
+                <a href="#inscripciones" class="text-gray-300 hover:text-brand-cta font-semibold">Inscripciones</a>
+                <a href="#galeria" class="text-gray-300 hover:text-brand-cta font-semibold">Galería</a>
+                <a href="#contacto" class="text-gray-300 hover:text-brand-cta font-semibold">Contacto</a>
+                <a href="#inscripciones" id="nav-cta-mobile"
+                    class="mt-2 text-center px-6 py-3 bg-brand-cta text-black font-bold rounded-full">
+                    Inscríbete
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <!-- Background Overlay -->
+        <div class="absolute inset-0 z-0">
+            <!-- Placeholder for Hero Image - To be replaced or generated -->
+            <div class="w-full h-full bg-gradient-to-br from-gray-900 to-black opacity-90"></div>
+            <div
+                class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center opacity-20 mix-blend-overlay">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+            <!-- Text Content -->
+            <div class="space-y-6" data-aos="fade-up">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight" id="hero-title">
+                    <!-- Dynamic Content -->
+                </h1>
+                <p class="text-lg text-brand-subtext max-w-lg" id="hero-subtitle">
+                    <!-- Dynamic Content -->
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <a href="#" target="_blank" id="hero-whatsapp-btn"
+                        class="flex items-center justify-center gap-2 px-8 py-3 bg-brand-cta text-black font-bold rounded-full hover:shadow-[0_0_20px_rgba(255,193,7,0.4)] transition-all transform hover:-translate-y-1">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <!-- Dynamic Content -->
+                    </a>
+                    <a href="#entrenamientos" id="hero-schedule-btn"
+                        class="flex items-center justify-center px-8 py-3 border-2 border-white/20 text-white font-bold rounded-full hover:bg-white/10 transition-all">
+                        <!-- Dynamic Content -->
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Image / Visual -->
+            <div class="hidden md:block relative" data-aos="zoom-in" data-aos-delay="200">
+                <div
+                    class="relative z-10 rounded-2xl overflow-hidden shadow-2xl border border-white/10 transform rotate-2 hover:rotate-0 transition-all duration-500 animate-float">
+                    <img src="" id="hero-image" alt="Voleibol Action" class="w-full h-auto object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                </div>
+                <!-- Decorative Elements -->
+                <div
+                    class="absolute -top-10 -right-10 w-40 h-40 bg-brand-accent-end rounded-full blur-[100px] opacity-30">
+                </div>
+                <div
+                    class="absolute -bottom-10 -left-10 w-40 h-40 bg-brand-accent-start rounded-full blur-[100px] opacity-30">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="nosotros" class="py-20 bg-brand-bg">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6" id="about-title">
+                    <!-- Dynamic Content -->
+                </h2>
+                <p class="text-gray-300 text-lg leading-relaxed" id="about-description">
+                    <!-- Dynamic Content -->
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8" id="about-cards">
+                <!-- Dynamic Content -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainings & Schedules Section -->
+    <section id="entrenamientos" class="py-20 bg-brand-card relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-brand-accent-end opacity-5 rounded-full blur-3xl"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" id="trainings-title">
+                    <!-- Dynamic Content -->
+                </h2>
+                <p class="text-xl text-white font-semibold flex items-center justify-center gap-2"
+                    id="trainings-location">
+                    <i class="fa-solid fa-location-dot text-brand-cta"></i>
+                    <!-- Dynamic Content -->
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-12">
+                <!-- Schedule Table -->
+                <div data-aos="fade-right"
+                    class="lg:col-span-2 bg-brand-bg rounded-2xl p-6 md:p-8 border border-white/5 shadow-lg">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-3" id="schedule-title">
+                        <i class="fa-regular fa-calendar-days text-brand-cta"></i>
+                        <!-- Dynamic Content -->
+                    </h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr
+                                    class="border-b border-white/10 text-brand-subtext text-sm uppercase tracking-wider">
+                                    <th class="py-4 px-4">Día</th>
+                                    <th class="py-4 px-4">Horario</th>
+                                    <th class="py-4 px-4">Sede</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-300" id="schedule-table-body">
+                                <!-- Dynamic Content -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div
+                        class="mt-6 p-4 bg-yellow-500/10 border border-yellow-500/20 rounded-lg flex items-start gap-3">
+                        <i class="fa-solid fa-circle-info text-brand-cta mt-1"></i>
+                        <p class="text-sm text-gray-300" id="schedule-note">
+                            <!-- Dynamic Content -->
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Categories Card -->
+                <div data-aos="fade-left"
+                    class="bg-gradient-to-br from-brand-bg to-black rounded-2xl p-8 border border-white/10 flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold mb-8 text-white" id="categories-title">Categorías</h3>
+                    <ul class="space-y-6" id="categories-list">
+                        <!-- Dynamic Content -->
+                    </ul>
+                    <div class="mt-10">
+                        <a href="#inscripciones" id="categories-btn"
+                            class="block w-full py-3 text-center bg-white/5 hover:bg-brand-cta hover:text-black text-white font-bold rounded-lg transition-all duration-300">
+                            Consultar Disponibilidad
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeria" class="py-20 bg-brand-bg">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center" id="gallery-title">
+                <!-- Dynamic Content -->
+            </h2>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6" id="gallery-grid">
+                <!-- Dynamic Content -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="inscripciones" class="py-20 bg-brand-card">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Form -->
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6" id="contact-title">
+                        <!-- Dynamic Content -->
+                    </h2>
+                    <p class="text-gray-300 mb-8" id="contact-description">
+                        <!-- Dynamic Content -->
+                    </p>
+
+                    <form id="contactForm" class="space-y-6 bg-brand-bg p-8 rounded-2xl border border-white/5"
+                        data-aos="fade-up">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-2">Nombre Completo</label>
+                            <input type="text" id="nameInput" required
+                                class="w-full bg-brand-card border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-cta focus:ring-1 focus:ring-brand-cta transition-all"
+                                placeholder="Tu nombre">
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Edad</label>
+                                <input type="number" id="ageInput"
+                                    class="w-full bg-brand-card border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-cta focus:ring-1 focus:ring-brand-cta transition-all"
+                                    placeholder="Ej. 14">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Teléfono</label>
+                                <input type="tel" id="phoneInput" required
+                                    class="w-full bg-brand-card border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-cta focus:ring-1 focus:ring-brand-cta transition-all"
+                                    placeholder="10 dígitos">
+                            </div>
+                        </div>
+
+                        <div id="tutorField" class="hidden">
+                            <label class="block text-sm font-medium text-gray-400 mb-2">Nombre del Tutor</label>
+                            <input type="text" id="tutorInput"
+                                class="w-full bg-brand-card border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-cta focus:ring-1 focus:ring-brand-cta transition-all"
+                                placeholder="Nombre del padre o madre">
+                            <p class="text-xs text-gray-500 mt-1">Requerido para menores de 18 años.</p>
+                        </div>
+
+                        <button type="submit" id="contact-submit-btn"
+                            class="w-full bg-brand-cta text-black font-bold py-4 rounded-lg hover:shadow-[0_0_15px_rgba(255,193,7,0.4)] transition-all transform hover:-translate-y-1">
+                            <!-- Dynamic Content -->
+                        </button>
+                    </form>
+
+                    <div class="mt-8 flex flex-col gap-4">
+                        <div class="flex items-center gap-4 text-gray-300">
+                            <div
+                                class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-brand-cta">
+                                <i class="fa-brands fa-whatsapp text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500" id="whatsapp-label">WhatsApp Oficial</p>
+                                <a href="#" id="whatsapp-link" class="font-bold hover:text-brand-cta transition-colors">
+                                    <!-- Dynamic Content -->
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 text-gray-300">
+                            <div
+                                class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-brand-cta">
+                                <i class="fa-solid fa-file-lines text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500" id="req-label">Requisitos</p>
+                                <p class="font-medium" id="req-text">
+                                    <!-- Dynamic Content -->
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div
+                    class="h-full min-h-[400px] bg-brand-bg rounded-2xl overflow-hidden border border-white/5 relative">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3730.864757529683!2d-101.3537!3d20.6736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842c7fd0c0c0c0c0%3A0x0!2sUnidad%20Deportiva%20Sur!5e0!3m2!1ses!2smx!4v1620000000000!5m2!1ses!2smx"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        class="absolute inset-0 grayscale hover:grayscale-0 transition-all duration-500">
+                    </iframe>
+                    <!-- Overlay for style matching if needed, but grayscale filter works well -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 border-t border-white/10">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex items-center justify-center gap-2 mb-4">
+                <div
+                    class="w-6 h-6 rounded-full bg-gradient-brand flex items-center justify-center text-black font-bold text-xs">
+                    <i class="fa-solid fa-volleyball"></i>
+                </div>
+                <span class="text-lg font-bold tracking-wide text-white" id="footer-logo">CEFOVOL MBL</span>
+            </div>
+            <p class="text-gray-500 text-sm" id="footer-copyright">
+                <!-- Dynamic Content -->
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Form Logic & WhatsApp Integration
+        const ageInput = document.getElementById('ageInput');
+        const tutorField = document.getElementById('tutorField');
+        const contactForm = document.getElementById('contactForm');
+
+        if (ageInput && tutorField) {
+            ageInput.addEventListener('input', (e) => {
+                const age = parseInt(e.target.value);
+                if (age && age < 18) {
+                    tutorField.classList.remove('hidden');
+                    document.getElementById('tutorInput').required = true;
+                } else {
+                    tutorField.classList.add('hidden');
+                    document.getElementById('tutorInput').required = false;
+                    document.getElementById('tutorInput').value = '';
+                }
+            });
+        }
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const name = document.getElementById('nameInput').value;
+                const age = document.getElementById('ageInput').value;
+                const phone = document.getElementById('phoneInput').value;
+                const tutor = document.getElementById('tutorInput').value;
+
+                let message = `Hola CEFOVOL MBL, me gustaría inscribirme.%0A%0A*Datos del Alumno:*%0A👤 Nombre: ${name}%0A🎂 Edad: ${age} años%0A📱 Teléfono: ${phone}`;
+
+                if (tutor) {
+                    message += `%0A👨‍👩‍👧 Tutor: ${tutor}`;
+                }
+
+                message += `%0A%0AQuedo atento a los requisitos. ¡Gracias!`;
+
+                window.open(`https://wa.me/524622653902?text=${message}`, '_blank');
+            });
+        }
+
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+            easing: 'ease-out-cubic'
+        });
+
+        // Load Content from data.json
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('data.json')
+                .then(response => response.json())
+                .then(d => {
+                    // Header
+                    document.getElementById('nav-logo').textContent = d.header.logo_text;
+
+                    // Hero
+                    document.getElementById('hero-title').innerHTML = `${d.hero.title_part1} <span class="text-gradient">${d.hero.title_highlight1}</span> ${d.hero.title_part2} <span class="text-gradient">${d.hero.title_highlight2}</span> ${d.hero.title_part3}`;
+                    document.getElementById('hero-subtitle').textContent = d.hero.subtitle;
+                    document.getElementById('hero-whatsapp-btn').innerHTML = `<i class="fa-brands fa-whatsapp text-xl"></i> ${d.hero.whatsapp_button}`;
+                    document.getElementById('hero-whatsapp-btn').href = d.contact.whatsapp.link;
+                    document.getElementById('hero-schedule-btn').textContent = d.hero.schedule_button;
+                    document.getElementById('hero-image').src = d.hero.hero_image;
+
+                    // About
+                    document.getElementById('about-title').innerHTML = `${d.about.title} <span class="text-gradient">${d.about.title_highlight}</span>`;
+                    document.getElementById('about-description').textContent = d.about.description;
+
+                    const aboutContainer = document.getElementById('about-cards');
+                    aboutContainer.innerHTML = ''; // Clear loading state
+                    d.about.cards.forEach((card, index) => {
+                        const cardHTML = `
+                        <div data-aos="fade-up" data-aos-delay="${index * 100}"
+                            class="bg-brand-card p-8 rounded-2xl border border-white/5 hover:border-brand-cta/50 transition-all duration-300 hover:-translate-y-2 group">
+                            <div class="w-14 h-14 bg-brand-card rounded-full flex items-center justify-center mb-6 text-brand-cta text-2xl group-hover:bg-brand-cta group-hover:text-black transition-colors">
+                                <i class="fa-solid ${card.icon}"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 text-white">${card.title}</h3>
+                            <p class="text-brand-subtext">${card.text}</p>
+                        </div>`;
+                        aboutContainer.innerHTML += cardHTML;
+                    });
+
+                    // Trainings
+                    document.getElementById('trainings-title').innerHTML = `${d.trainings.title} <span class="text-gradient">${d.trainings.title_highlight}</span>`;
+                    document.getElementById('trainings-location').innerHTML = `<i class="fa-solid fa-location-dot text-brand-cta"></i> ${d.trainings.location}`;
+                    document.getElementById('schedule-title').innerHTML = `<i class="fa-regular fa-calendar-days text-brand-cta"></i> ${d.trainings.schedule_title}`;
+
+                    const scheduleBody = document.getElementById('schedule-table-body');
+                    scheduleBody.innerHTML = '';
+                    d.trainings.schedule_table.forEach(row => {
+                        const rowHTML = `
+                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                            <td class="py-4 px-4 font-semibold text-white">${row.day}</td>
+                            <td class="py-4 px-4 text-brand-cta font-medium">${row.time}</td>
+                            <td class="py-4 px-4">${row.location}</td>
+                        </tr>`;
+                        scheduleBody.innerHTML += rowHTML;
+                    });
+
+                    document.getElementById('schedule-note').innerHTML = `<span class="text-brand-cta font-bold">Nota:</span> ${d.trainings.note}`;
+
+                    document.getElementById('categories-title').textContent = d.trainings.categories_title;
+                    const categoriesList = document.getElementById('categories-list');
+                    categoriesList.innerHTML = '';
+                    d.trainings.categories.forEach(cat => {
+                        const catHTML = `
+                        <li class="flex items-center justify-between group">
+                            <span class="text-gray-300 font-medium group-hover:text-white transition-colors">${cat.name}</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-sm text-brand-cta border border-white/10">${cat.age}</span>
+                        </li>`;
+                        categoriesList.innerHTML += catHTML;
+                    });
+                    document.getElementById('categories-btn').textContent = d.trainings.availability_btn;
+
+                    // Gallery
+                    document.getElementById('gallery-title').innerHTML = `${d.gallery.title} <span class="text-gradient">${d.gallery.title_highlight}</span>`;
+                    const galleryGrid = document.getElementById('gallery-grid');
+                    galleryGrid.innerHTML = '';
+                    d.gallery.images.forEach(img => {
+                        const imgHTML = `
+                        <div data-aos="zoom-in" class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
+                            <img src="${img.url}" alt="${img.label}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <span class="text-white font-bold text-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300">${img.label}</span>
+                            </div>
+                        </div>`;
+                        galleryGrid.innerHTML += imgHTML;
+                    });
+
+                    // Contact
+                    document.getElementById('contact-title').innerHTML = `${d.contact.title} <span class="text-gradient">${d.contact.title_highlight}</span>`;
+                    document.getElementById('contact-description').textContent = d.contact.description;
+                    document.getElementById('contact-submit-btn').textContent = d.contact.form.submit_btn;
+
+                    document.getElementById('whatsapp-label').textContent = d.contact.whatsapp.label;
+                    document.getElementById('whatsapp-link').textContent = d.contact.whatsapp.number;
+                    document.getElementById('whatsapp-link').href = d.contact.whatsapp.link;
+
+                    document.getElementById('req-label').textContent = d.contact.requirements.label;
+                    document.getElementById('req-text').textContent = d.contact.requirements.text;
+
+                    // Footer
+                    document.getElementById('footer-logo').textContent = d.header.logo_text;
+                    document.getElementById('footer-copyright').textContent = d.footer.copyright;
+                })
+                .catch(error => console.error('Error loading content:', error));
+        });
+
+        // Remove Preloader
+        function removePreloader() {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.style.opacity = '0';
+                preloader.style.visibility = 'hidden';
+            }
+        }
+
+        // Try to remove on window load
+        window.addEventListener('load', () => {
+            setTimeout(removePreloader, 800);
+        });
+
+        // Fallback: Remove after 3 seconds max (in case load hangs)
+        setTimeout(removePreloader, 3000);
+    </script>
+    </script>
+    <!-- Netlify Identity Redirect -->
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
