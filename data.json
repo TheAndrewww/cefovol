@@ -1,6 +1,11 @@
 {
     "header": {
         "logo_text": "CEFOVOL MBL",
+        "logo": {
+            "ball": "https://res.cloudinary.com/dd93jrilg/image/upload/v1765335999/Logo_Volei_3_1_bg45yt.png",
+            "text": "https://res.cloudinary.com/dd93jrilg/image/upload/v1765336000/Logo_Volei_letras_3_1_pm7md4.png",
+            "full": "https://res.cloudinary.com/dd93jrilg/image/upload/v1765336113/Logo_Volei_3_x9sfjj.png"
+        },
         "menu": {
             "about": "Nosotros",
             "trainings": "Entrenamientos",
