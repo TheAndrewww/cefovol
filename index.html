@@ -190,9 +190,9 @@
 
     <!-- Preloader -->
     <div id="preloader">
-        <div class="loader-content">
-            <img id="preloader-logo" src="" alt="CEFOVOL MBL" class="w-24 h-24 mb-4 animate-bounce">
-            <h2 class="text-2xl font-bold text-white tracking-widest" id="preloader-text">CEFOVOL MBL</h2>
+        <div class="loader-content flex flex-col items-center justify-center">
+            <img id="preloader-logo" src="" alt="CEFOVOL MBL" class="w-24 h-24 mb-4 animate-bounce mx-auto">
+            <img id="preloader-text" src="" alt="CEFOVOL MBL" class="h-8 w-auto mx-auto">
             <div class="mt-4 w-48 h-1 bg-gray-800 rounded-full overflow-hidden mx-auto">
                 <div class="h-full bg-gradient-brand w-1/2 animate-[pulse_1s_infinite]"></div>
             </div>
@@ -635,6 +635,7 @@
                     // Logos
                     if (d.header.logo) {
                         document.getElementById('preloader-logo').src = d.header.logo.ball;
+                        document.getElementById('preloader-text').src = d.header.logo.text;
                         document.getElementById('nav-logo-img').src = d.header.logo.full;
                         document.getElementById('footer-logo-img').src = d.header.logo.full;
                     }
