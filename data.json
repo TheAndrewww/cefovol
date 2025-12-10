@@ -44,23 +44,92 @@
             }
         ]
     },
+    "mvv": {
+        "title": "Misión, Visión y",
+        "title_highlight": "Valores",
+        "mission": {
+            "icon": "fa-bullseye",
+            "title": "Misión",
+            "text": "Promover el desarrollo integral de nuestros deportistas a través de un programa de formación técnica, estratégica y física basado en la disciplina, el respeto y la responsabilidad. Nuestro objetivo es consolidar atletas con alto nivel competitivo y con una sólida calidad humana, capaces de desempeñarse con ética, compromiso y excelencia dentro y fuera de la cancha."
+        },
+        "vision": {
+            "icon": "fa-eye",
+            "title": "Visión",
+            "text": "Consolidarnos como una institución deportiva líder en el Bajío, reconocida por la formación de jugadores y jugadoras con altos estándares de desempeño, valores y profesionalismo. Buscamos ser un referente regional y estatal por nuestra estructura organizativa, calidad de entrenamiento, proyección competitiva y contribución al fortalecimiento del deporte en Irapuato y Guanajuato."
+        },
+        "values_title": "Valores",
+        "values": [
+            {
+                "name": "Disciplina",
+                "description": "Cumplimiento riguroso de entrenamientos, normas y objetivos deportivos."
+            },
+            {
+                "name": "Respeto",
+                "description": "Relación cordial y ética entre deportistas, entrenadores, familias y rivales."
+            },
+            {
+                "name": "Trabajo en Equipo",
+                "description": "Coordinación, solidaridad y cooperación para el logro de metas comunes."
+            },
+            {
+                "name": "Responsabilidad",
+                "description": "Asunción consciente de compromisos deportivos y conductuales."
+            },
+            {
+                "name": "Compromiso",
+                "description": "Participación activa y constante en los procesos de formación y competencia."
+            },
+            {
+                "name": "Integridad",
+                "description": "Conducción honesta, transparente y congruente en todas las actividades del club."
+            },
+            {
+                "name": "Inclusión",
+                "description": "Reconocimiento y aceptación de la diversidad, garantizando igualdad de oportunidades."
+            }
+        ]
+    },
     "trainings": {
         "title": "Entrenamientos y",
         "title_highlight": "Horarios",
         "location": "Sede: Gimnasio de la Unidad Deportiva Sur",
         "schedule_title": "Horario Semanal",
         "schedule_table": [
-            { "day": "Jueves", "time": "16:00 - 18:00", "location": "Gimnasio U.D. Sur" },
-            { "day": "Viernes", "time": "16:00 - 18:00", "location": "Gimnasio U.D. Sur" },
-            { "day": "Sábado", "time": "16:00 - 18:00", "location": "Gimnasio U.D. Sur" }
+            {
+                "day": "Jueves",
+                "time": "16:00 - 18:00",
+                "location": "Gimnasio U.D. Sur"
+            },
+            {
+                "day": "Viernes",
+                "time": "16:00 - 18:00",
+                "location": "Gimnasio U.D. Sur"
+            },
+            {
+                "day": "Sábado",
+                "time": "16:00 - 18:00",
+                "location": "Gimnasio U.D. Sur"
+            }
         ],
         "note": "Traer hidratación y ropa deportiva. Se sugiere el uso de rodilleras para mayor protección.",
         "categories_title": "Categorías",
         "categories": [
-            { "name": "Mini", "age": "6 a 10 años" },
-            { "name": "Infantil", "age": "11 a 14 años" },
-            { "name": "Juvenil", "age": "15 a 18 años" },
-            { "name": "Libre", "age": "18+ años" }
+            {
+                "name": "Mini",
+                "age": "6 a 10 años"
+            },
+            {
+                "name": "Infantil",
+                "age": "11 a 14 años"
+            },
+            {
+                "name": "Juvenil",
+                "age": "15 a 18 años"
+            },
+            {
+                "name": "Libre",
+                "age": "18+ años"
+            }
         ],
         "availability_btn": "Consultar Disponibilidad"
     },
@@ -68,29 +137,29 @@
         "title": "Nuestra",
         "title_highlight": "Galería",
         "images": [
-            { 
-                "url": "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?q=80&w=800&auto=format&fit=crop", 
-                "label": "Entrenamiento" 
+            {
+                "url": "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?q=80&w=800&auto=format&fit=crop",
+                "label": "Entrenamiento"
             },
-            { 
-                "url": "https://images.unsplash.com/photo-1592656094267-764a45160876?q=80&w=800&auto=format&fit=crop", 
-                "label": "Equipo" 
+            {
+                "url": "https://images.unsplash.com/photo-1592656094267-764a45160876?q=80&w=800&auto=format&fit=crop",
+                "label": "Equipo"
             },
-            { 
-                "url": "https://images.unsplash.com/photo-1526676037777-05a232554f77?q=80&w=800&auto=format&fit=crop", 
-                "label": "Sesión" 
+            {
+                "url": "https://images.unsplash.com/photo-1526676037777-05a232554f77?q=80&w=800&auto=format&fit=crop",
+                "label": "Sesión"
             },
-            { 
-                "url": "https://images.unsplash.com/photo-1459865264687-595d652de67e?q=80&w=800&auto=format&fit=crop", 
-                "label": "Convivencia" 
+            {
+                "url": "https://images.unsplash.com/photo-1459865264687-595d652de67e?q=80&w=800&auto=format&fit=crop",
+                "label": "Convivencia"
             },
-            { 
-                "url": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop", 
-                "label": "Juego amistoso" 
+            {
+                "url": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop",
+                "label": "Juego amistoso"
             },
-            { 
-                "url": "https://images.unsplash.com/photo-1526676037777-05a232554f77?q=80&w=800&auto=format&fit=crop", 
-                "label": "Trabajo físico" 
+            {
+                "url": "https://images.unsplash.com/photo-1526676037777-05a232554f77?q=80&w=800&auto=format&fit=crop",
+                "label": "Trabajo físico"
             }
         ]
     },
