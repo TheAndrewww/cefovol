@@ -29,6 +29,15 @@
     <!-- Favicon -->
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3311/3311579.png" type="image/png">
 
+    <!-- Preload Logo Images for faster loading -->
+    <link rel="preload" href="https://res.cloudinary.com/dd93jrilg/image/upload/v1765335999/Logo_Volei_3_1_bg45yt.png"
+        as="image">
+    <link rel="preload"
+        href="https://res.cloudinary.com/dd93jrilg/image/upload/v1765336000/Logo_Volei_letras_3_1_pm7md4.png"
+        as="image">
+    <link rel="preload" href="https://res.cloudinary.com/dd93jrilg/image/upload/v1765336113/Logo_Volei_3_x9sfjj.png"
+        as="image">
+
     <!-- Google Analytics (Placeholder) -->
     <!-- Reemplaza G-XXXXXXXXXX con tu ID de medición real -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -191,8 +200,11 @@
     <!-- Preloader -->
     <div id="preloader">
         <div class="loader-content flex flex-col items-center justify-center">
-            <img id="preloader-logo" src="" alt="CEFOVOL MBL" class="w-16 h-16 mb-4 animate-bounce mx-auto">
-            <img id="preloader-text" src="" alt="CEFOVOL MBL" class="h-20 w-auto mx-auto">
+            <img id="preloader-logo" src="" alt=""
+                class="w-16 h-16 mb-4 animate-bounce mx-auto opacity-0 transition-opacity duration-300"
+                onload="this.classList.remove('opacity-0')">
+            <img id="preloader-text" src="" alt="" class="h-20 w-auto mx-auto opacity-0 transition-opacity duration-300"
+                onload="this.classList.remove('opacity-0')">
             <div class="mt-4 w-48 h-1 bg-gray-800 rounded-full overflow-hidden mx-auto">
                 <div class="h-full bg-gradient-brand w-1/2 animate-[pulse_1s_infinite]"></div>
             </div>
