@@ -99,5 +99,11 @@ collections:
                 ]}
             ]}
           - {label: "Footer", name: "footer", widget: "object", fields: [
-              {label: "Copyright", name: "copyright", widget: "string"}
+              {label: "Copyright", name: "copyright", widget: "string"},
+              {label: "Redes Sociales", name: "social", widget: "object", fields: [
+                  {label: "Facebook URL", name: "facebook", widget: "string"},
+                  {label: "Instagram URL", name: "instagram", widget: "string"},
+                  {label: "TikTok URL", name: "tiktok", widget: "string"},
+                  {label: "YouTube URL", name: "youtube", widget: "string"}
+                ]}
             ]}
