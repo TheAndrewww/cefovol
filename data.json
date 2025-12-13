@@ -21,7 +21,7 @@
         "title_part2": "y",
         "title_highlight2": "personas",
         "title_part3": "extraordinarias",
-        "subtitle": "Club de voleibol con formación por categorías (Mini, Infantil, Juvenil y Libre). Entrenamientos los jueves, viernes y sábado de 16:00 a 18:00. ¡Vive la energía CEFOVOL MBL!",
+        "subtitle": "Somos un club de voleibol que se preocupa por la formación integral de sus jugadores. No te preocupes por tu meta de partida, aquí te podemos ofrecer distintas categorías. ¡Atrévete y vive la energía CEFOVOL MBL!",
         "whatsapp_button": "Inscríbete por WhatsApp",
         "schedule_button": "Ver horarios",
         "background_image": "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?q=80&w=2000&auto=format&fit=crop",
@@ -40,12 +40,12 @@
             {
                 "icon": "fa-users",
                 "title": "Comunidad",
-                "text": "Ambiente familiar y eventos del club que fomentan la unión."
+                "text": "Eventos de carácter familiar que fomentan la unión personal del club."
             },
             {
                 "icon": "fa-trophy",
                 "title": "Proyección",
-                "text": "Participación en torneos locales y regionales de alto nivel."
+                "text": "Participación en torneos locales, regionales y nacionales de nivel competitivo."
             }
         ]
     },
@@ -155,12 +155,12 @@
                 "label": "Sesión"
             },
             {
-                "url": "https://images.unsplash.com/photo-1459865264687-595d652de67e?q=80&w=800&auto=format&fit=crop",
-                "label": "Convivencia"
+                "url": "https://images.unsplash.com/photo-1553544321-70c527f6bc29?q=80&w=800&auto=format&fit=crop",
+                "label": "Saque"
             },
             {
-                "url": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=800&auto=format&fit=crop",
-                "label": "Juego amistoso"
+                "url": "https://images.unsplash.com/photo-1588492069485-d05b56b2831d?q=80&w=800&auto=format&fit=crop",
+                "label": "Defensa"
             },
             {
                 "url": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=800&auto=format&fit=crop",
@@ -188,7 +188,7 @@
     "footer": {
         "copyright": "© 2024 CEFOVOL MBL. Todos los derechos reservados.",
         "social": {
-            "facebook": "https://www.facebook.com/martin.bustosleon",
+            "facebook": "https://www.facebook.com/groups/1310596769433467/",
             "instagram": "https://www.instagram.com/martinbustosleon",
             "tiktok": "https://www.tiktok.com/@martin.bustos.leo",
             "youtube": "https://www.youtube.com/@martinbustosleon3457"
