@@ -66,23 +66,31 @@
         "values": [
             {
                 "name": "Disciplina",
-                "description": "Cumplimiento riguroso de entrenamientos, normas y objetivos deportivos."
+                "description": "Orden, constancia y cumplimiento riguroso de entrenamientos, normas y objetivos como base del desarrollo deportivo y personal."
             },
             {
                 "name": "Respeto",
-                "description": "Relación cordial y ética entre deportistas, entrenadores, familias y rivales."
-            },
-            {
-                "name": "Trabajo en Equipo",
-                "description": "Coordinación, solidaridad y cooperación para el logro de metas comunes."
-            },
-            {
-                "name": "Responsabilidad",
-                "description": "Asunción consciente de compromisos deportivos y conductuales."
+                "description": "Trato cordial y ético hacia compañeros, entrenadores, árbitros, rivales y familias, generando un ambiente sano y formativo."
             },
             {
                 "name": "Compromiso",
-                "description": "Participación activa y constante en los procesos de formación y competencia."
+                "description": "Asumir con seriedad la responsabilidad con el club, cumpliendo entrenamientos, acuerdos y objetivos comunes de forma activa y constante."
+            },
+            {
+                "name": "Trabajo en Equipo",
+                "description": "Unión, comunicación, coordinación y cooperación como pilares del éxito deportivo y humano."
+            },
+            {
+                "name": "Resiliencia",
+                "description": "Levantarnos ante la dificultad, aprender de los errores y seguir adelante con fortaleza mental, actitud positiva y determinación."
+            },
+            {
+                "name": "Actitud y Esfuerzo",
+                "description": "Actitud positiva y perseverante, dando siempre el máximo esfuerzo en cada entrenamiento y competencia."
+            },
+            {
+                "name": "Responsabilidad",
+                "description": "Asunción consciente de obligaciones deportivas, académicas y personales, siendo ejemplo dentro y fuera de la cancha."
             },
             {
                 "name": "Integridad",
@@ -90,7 +98,11 @@
             },
             {
                 "name": "Inclusión",
-                "description": "Reconocimiento y aceptación de la diversidad, garantizando igualdad de oportunidades."
+                "description": "Reconocimiento y aceptación de la diversidad, garantizando igualdad de oportunidades para todos."
+            },
+            {
+                "name": "Identidad",
+                "description": "Sentido de pertenencia al club, portando con orgullo los colores y valores de CEFOVOL MBL."
             }
         ]
     },
