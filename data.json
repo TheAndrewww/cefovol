@@ -155,28 +155,34 @@
         "title_highlight": "Galería",
         "images": [
             {
-                "url": "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?q=80&w=800&auto=format&fit=crop",
-                "label": "Entrenamiento"
+                "url": "https://res.cloudinary.com/dd93jrilg/video/upload/v1765738492/WhatsApp_Video_2025-12-14_at_07.47.31_lmlgpl.mp4",
+                "label": "Entrenamiento",
+                "type": "video"
             },
             {
-                "url": "https://images.unsplash.com/photo-1592656094267-764a45160876?q=80&w=800&auto=format&fit=crop",
-                "label": "Equipo"
+                "url": "https://res.cloudinary.com/dd93jrilg/image/upload/v1765738487/WhatsApp_Image_2025-12-14_at_07.47.30_4_v9ccoz.jpg",
+                "label": "Equipo",
+                "type": "image"
             },
             {
-                "url": "https://images.unsplash.com/photo-1547347298-4074fc3086f0?q=80&w=800&auto=format&fit=crop",
-                "label": "Sesión"
+                "url": "https://res.cloudinary.com/dd93jrilg/image/upload/v1765738483/WhatsApp_Image_2025-12-14_at_07.47.27_xcj6gn.jpg",
+                "label": "Sesión",
+                "type": "image"
             },
             {
-                "url": "https://plus.unsplash.com/premium_photo-1708696216242-a432e73ecd72?q=80&w=800&auto=format&fit=crop",
-                "label": "Social"
+                "url": "https://res.cloudinary.com/dd93jrilg/image/upload/v1765738483/WhatsApp_Image_2025-12-14_at_07.47.26_4_sjipmm.jpg",
+                "label": "Social",
+                "type": "image"
             },
             {
-                "url": "https://images.unsplash.com/photo-1514820720301-4c4790309f46?q=80&w=800&auto=format&fit=crop",
-                "label": "Torneos"
+                "url": "https://res.cloudinary.com/dd93jrilg/video/upload/v1765738491/WhatsApp_Video_2025-12-14_at_07.47.27_2_y794ph.mp4",
+                "label": "Torneos",
+                "type": "video"
             },
             {
-                "url": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=800&auto=format&fit=crop",
-                "label": "Trabajo físico"
+                "url": "https://res.cloudinary.com/dd93jrilg/video/upload/v1765738490/WhatsApp_Video_2025-12-14_at_07.47.22_yz1pex.mp4",
+                "label": "Trabajo físico",
+                "type": "video"
             }
         ]
     },

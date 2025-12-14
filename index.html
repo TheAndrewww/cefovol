@@ -748,14 +748,22 @@
                     const galleryGrid = document.getElementById('gallery-grid');
                     galleryGrid.innerHTML = '';
                     d.gallery.images.forEach(img => {
-                        const imgHTML = `
+                        let mediaHTML;
+                        if (img.type === 'video') {
+                            mediaHTML = `
+                            <video src="${img.url}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" muted loop playsinline onmouseenter="this.play()" onmouseleave="this.pause()"></video>`;
+                        } else {
+                            mediaHTML = `
+                            <img src="${img.url}" alt="${img.label}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">`;
+                        }
+                        const itemHTML = `
                         <div data-aos="zoom-in" class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
-                            <img src="${img.url}" alt="${img.label}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            ${mediaHTML}
                             <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                 <span class="text-white font-bold text-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300">${img.label}</span>
                             </div>
                         </div>`;
-                        galleryGrid.innerHTML += imgHTML;
+                        galleryGrid.innerHTML += itemHTML;
                     });
 
                     // Contact
